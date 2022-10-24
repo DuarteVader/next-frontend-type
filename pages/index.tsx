@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import {
   Button,
   Checkbox,
-  Flex,
   FormControl,
   FormLabel,
   Input,
@@ -88,9 +87,7 @@ const Auth: NextPage = () => {
             color={"#f00"}
             style={{
               fontSize: "12px",
-              fontWeight: "400",
               lineHeight: "10px",
-              letterSpacing: "0em",
             }}
           >
             * Invalid email
@@ -120,6 +117,7 @@ const Auth: NextPage = () => {
                 <Link color={'blue.400'}>Forgot password?</Link>
               </Stack>
               <Button
+                disabled={!validEmail}
                 bg={'blue.400'}
                 color={'white'}
                 _hover={{
